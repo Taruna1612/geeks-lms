@@ -1,0 +1,19 @@
+.primary-bg-color{
+    background-color: #754ffe; 
+ }
+ 
+ .primary-color{
+     color: #754ffe; 
+ }
+ 
+ .navbar .nav-item .nav-link{ font-weight: 500;  color:  #000;  }
+ .navbar .nav-item:hover .nav-link{ color:  #754ffe;  }
+ 
+ @media all and (min-width: 992px) {
+     .navbar .nav-item .dropdown-menu{ display: none; }
+     .navbar .nav-item:hover .dropdown-menu{ display: block; }
+     .navbar .nav-item .dropdown-menu{ margin-top:0; }
+     .profile .dropleft:hover .dropdown-menu{display: block;}
+     /* .profile .dropleft:hover .dropdown-menu .dropdown-item:hover{background-color: #754ffe; color: white;} */
+    
+ }

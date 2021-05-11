@@ -1,0 +1,138 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="https://codescandy.com/geeks/assets/images/brand/logo/logo.svg" alt="Geeks">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mt-3">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Browse
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Web Development</a>
+                        <a class="dropdown-item" href="#">Design</a>
+                        <a class="dropdown-item" href="#">Mobile App</a>
+                        <a class="dropdown-item" href="#">IT Software</a>
+                        <a class="dropdown-item" href="#">Marketing</a>
+                        <a class="dropdown-item" href="#">Music</a>
+                        <a class="dropdown-item" href="#">Lifestyles</a>
+                        <a class="dropdown-item" href="#">Buisness</a>
+                        <a class="dropdown-item" href="#">Photography</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-hover" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Landings
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <h4 class="dropdown-header">Landings</h4>
+                        <a class="dropdown-item" href="#">Courses</a>
+                        <a class="dropdown-item" href="#">Lead Course</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pages
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Course Single</a>
+                        <a class="dropdown-item" href="#">Course Single v2</a>
+                        <a class="dropdown-item" href="#">Course Resume</a>
+                        <a class="dropdown-item" href="#">Course Category</a>
+                        <a class="dropdown-item" href="#">Course Checkout</a>
+                        <a class="dropdown-item" href="#">Course List/Grid</a>
+                        <a class="dropdown-item" href="#">Add new Course</a>
+                        <a class="dropdown-item" href="#">Paths</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Blog</a>
+                        <a class="dropdown-item" href="#">About</a>
+                        <a class="dropdown-item" href="#">Help Center</a>
+                        <a class="dropdown-item" href="#">Error Page</a>
+                        <a class="dropdown-item" href="#">Pricing</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Accounts
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <h4 class="dropdown-header">Accounts</h4>
+                        <a class="dropdown-item" href="#">Instructor</a>
+                        <a class="dropdown-item" href="#">Students</a>
+                        <a class="dropdown-item" href="#">Admin</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Sign In</a>
+                        <a class="dropdown-item" href="#">Sign Up</a>
+                        <a class="dropdown-item" href="#">Forgot Password</a>
+                        <a class="dropdown-item" href="#">Edit Profile</a>
+                        <a class="dropdown-item" href="#">Security</a>
+                        <a class="dropdown-item" href="#">Social Profiles</a>
+                        <a class="dropdown-item" href="#">Notifications</a>
+                        <a class="dropdown-item" href="#">Privacy Settings</a>
+                        <a class="dropdown-item" href="#">Delete Profile</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <svg class="mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill-rule="evenodd"
+                                d="M6 12a2 2 0 11-4 0 2 2 0 014 0zm8 0a2 2 0 11-4 0 2 2 0 014 0zm6 2a2 2 0 100-4 2 2 0 000 4z">
+                            </path>
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">
+                            <h6 class="mb-0 pt-1 px-1">Documentations</h6>
+                            <p class="mb-0 font-size-xs px-1 pb-1">
+                                Browse the all documentation
+                            </p>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <h6 class="mb-0 pt-1 px-1">Changelog <span class="text-primary ml-1">v1.0.1</span></h6>
+                            <p class="mb-0 font-size-xs px-1 pb-1">See what's new</p>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <form class="mt-3 mt-lg-1 ml-lg-3 d-flex align-items-center">
+                <input type="search" class="form-control pl-3" placeholder="Search Courses">
+            </form>
+        </div>
+        <div *ngIf="view" class="profile">
+            <div class="dropleft">
+                <div class="dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <img alt="avatar" height="40px" width="40px"
+                        src="https://codescandy.com/geeks/assets/images/avatar/avatar-1.jpg" class="rounded-circle"
+                        (click)="viewProfile()">
+                </div>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">
+                        <div class="d-flex ml-3 lh-1">
+                            <div class="avatar avatar-md avatar-indicators avatar-online">
+                                <img height="40px" width=" 40px" alt="avatar"
+                                    src="https://codescandy.com/geeks/assets/images/avatar/avatar-1.jpg"
+                                    class="rounded-circle">
+                            </div>
+                            <div class="ml-3 lh-1">
+                                <h5 class="mb-1">{{profile.name}}</h5>
+                                <p class="mb-0">{{profile.id}}</p>
+                            </div>
+                        </div>
+                        <button (click)="onLogout()"class="btn btn-primary mx-4">Logout</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

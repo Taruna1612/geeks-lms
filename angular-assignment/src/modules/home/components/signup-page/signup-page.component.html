@@ -1,0 +1,58 @@
+<div class="container d-flex flex-column ">
+  <div class="row align-items-center justify-content-center no-gutters min-vh-100">
+    <div class="col-lg-5 col-md-8 sm-pb-3 form-margin ">
+      <div class="card shadow">
+        <div class="card-body p-4">
+          <div class="mb-4">
+            <img src="https://codescandy.com/geeks/assets/images/brand/logo/logo-icon.svg" class="mb-4" alt="">
+            <h1 class="mb-1 font-weight-bold">Sign up</h1>
+            <span>Already have an account ?
+              <a class="link" routerLink='/home/login'>Sign In</a>
+            </span>
+          </div>
+          <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+            <div class="form-group">
+              <label for="exampleInputUsername1">Username</label>
+              <input #name="ngModel" ngModel type="text" class="form-control" id="exampleInputUsername1"
+                placeholder="User Name" name="uname" required [class.is-invalid]="name.invalid && name.touched">
+              <small class="text-danger" [class.d-none]="name.valid || name.untouched">name is required</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email</label>
+              <input #email="ngModel" type="email" class="form-control" id="exampleInputEmail1"
+                placeholder="Email address here" ngModel name="email"
+                [class.is-invalid]="email.invalid && email.touched" required>
+              <small class="text-danger" [class.d-none]="email.valid || email.untouched">Enter a valid email
+                address</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1"
+                pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" #password="ngModel" ngModel
+                name="password" required [class.is-invalid]="password.invalid && password.touched">
+              <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password must contain min
+                8 chars, atleast 1 letter, 1 num and 1 special char</small>
+            </div>
+            <div class="form-group form-check">
+              <div class="d-lg-flex justify-content-between mb-4">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" name="checkbox" #check="ngModel"
+                  ngModel required>
+                <label class="form-check-label" for="exampleCheck1">I agree to the Terms of Services and
+                  Policies</label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-block text-white sign-button"
+              [disabled]="!signupForm.valid">Signup</button>
+            <hr class="my-4">
+            <div class="mb-4 text-center ">
+              <a href="#" class="link px-1"><i class="fa fa-lg fa-facebook-official" aria-hidden="true"></i></a>
+              <a href="#" class="link px-1"><i class="fa fa-lg fa-twitter-square" aria-hidden="true"></i></a>
+              <a href="#" class="link px-1"><i class="fa fa-lg fa-linkedin-square" aria-hidden="true"></i></a>
+              <a href="#" class="link px-1"><i class="fa fa-lg fa-github" aria-hidden="true"></i></a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

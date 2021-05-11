@@ -1,0 +1,76 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="display-4">{{profile.name}}</h2>
+                <p class="lead">{{"@" + profile._id}}</p>
+                <button href="#" width="60px" class="btn btn-primary btn-sm d-none d-md-block primary-bg-color">Account
+                    Settings</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="nav nav-lb-tab ml-2 mb-4" id="tab" role="tablist">
+        <li class="nav-item ml-0" role="presentation">
+            <button class="btn btn-light" (click)="loadBookmarkedCourses()">Bookmarked</button>
+        </li>
+        <li class="nav-item ml-2" role="presentation">
+            <button class="btn btn-light" (click)="loadLearningCourses()">Learning</button>
+        </li>
+        <li class="nav-item ml-2" role="presentation">
+            <button class="btn btn-light" (click)="loadPath()">Path</button>
+        </li>
+    </ul>
+</div>
+
+<div *ngIf="show" class="container">
+    <div class="row d-flex mb-4">
+        <div class="col" *ngFor="let course of courses">
+            <div class="card">
+                <img class="card-img-top" src="https://codescandy.com/geeks/assets/images/course/course-graphql.jpg"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <a routerLink='//course' class="card-title">{{course.courseName}}</a>
+                    <ul class="mb-2 ml-0 pl-0 d-flex card-list">
+                        <li class="mr-2">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            {{course.time}}
+                        </li>
+                        <li>
+                            <i class="fa fa-signal ml-1" aria-hidden="true"></i>
+                            {{course.level}}
+                        </li>
+                    </ul>
+                    <div class="rank d-flex">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="card-footer bg-white">
+                    <div class="row align-items-center no-gutters ">
+                        <div class="col ml-2">
+                            <span>{{course.author}}</span>
+                        </div>
+                        <div class="col-auto">
+                            <a href="#" class="text-muted bookmark">
+                                <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="!show" class="container d-flex justify-content-center">
+    <div>
+        <h2 class="ml-4 pl-4">Coming Soon</h2>
+        <img height="300px" width="300px"
+            src="https://codescandy.com/geeks/assets/images/background/coming-soon-img.svg">
+    </div>
+</div>

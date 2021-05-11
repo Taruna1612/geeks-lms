@@ -1,0 +1,37 @@
+.form-margin{
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.form-bgColor{
+    background-color: #f5f4f8;;
+}
+
+.primary-color{
+    color: #754ffe; 
+}
+
+.primary-bg-color{
+    background-color: #754ffe; 
+    border-color:  #754ffe;
+ }
+ 
+ .link{
+     text-decoration: none;
+     color: #754ffe; 
+ }
+ 
+ .link:hover{
+    text-decoration: none;
+    color: #5729fe; 
+
+ }
+
+ .sign-button{
+    background-color: #754ffe; 
+ }
+
+ .sign-button:hover{
+    background-color: #5729fe; 
+
+ }
